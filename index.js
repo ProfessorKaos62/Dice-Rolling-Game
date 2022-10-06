@@ -67,3 +67,17 @@ function getImage2(n) {
 }
 
 let theSecondImage = getImage2(randomNumber2);
+
+function chooseWinner(player1, player2) {
+    if (player1 > player2) {
+        document.getElementById("announcement").innerHTML = "Player 1 Wins!";
+    }
+    else if (player2 > player1) {
+        document.getElementById("announcement").innerHTML = "Player 2 Wins!";
+    }
+    else {
+        document.getElementById("announcement").innerHTML = "Tie Game!";
+    }
+}
+
+let winner = chooseWinner(randomNumber1, randomNumber2);
